@@ -1,12 +1,12 @@
 import sqlite3 
+import sqlite3
 
-conn = sqlite3.Connection("mydatabase.db")
+conn = sqlite3.connect("mydatabase.db")
 
-print("opend database")
+print("Opened database successfully")
 
-conn.execute("CREATE TABLE student (name TEXT , email TEXT )")
+conn.execute("CREATE TABLE IF NOT EXISTS student (name TEXT, email TEXT)")
 
-
-print("table has been created")
+print("Table has been created")
 
 conn.close()
