@@ -9,10 +9,13 @@ def home():
 def adddata():
     return render_template("form.html")
      
-@app.route("/submitform" method= ["get"])
+@app.route("/submitform" , methods= ["POST","GET"])
 def submit():
     if request.method == "post":
-        
+        name = request.form["name"]
+        email = request.form["email"]
+        password = request.form["password"]
+    return "form hasbeen submitted"    
         
 
 if __name__ == "__main__":
