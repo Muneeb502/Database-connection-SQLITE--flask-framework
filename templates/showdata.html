@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <table border="1px solid">
+    <table border="1px solid" align="center" >
           <thead>
             <td>NAME</td>
             <td>email</td>
           </thead>
 
-          {%  fro row in rows %}
+          {%  for row in rows %}
 
           <tr>
             <td>{{row["name"]}}</td>
@@ -22,7 +22,8 @@
           {%  endfor %}
 
 
-          <a href="/">go to home page</a>
     </table>
+    <a   href="/">go to home page</a>
+
 </body>
 </html>

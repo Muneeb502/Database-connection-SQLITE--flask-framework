@@ -3,11 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333; /* Background color */
+            overflow: hidden;
+        }
+
+        .navbar a {
+            margin: 2rem;
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-bottom: 5px solid transparent; /* Transparent underline */
+            transition: border-bottom-color 0.3s ease; /* Smooth transition */
+        }
+
+        .navbar a:hover {
+            color: black;
+            background-color: white;
+            border-radius: 1rem;
+            border-bottom-color: rgb(39, 21, 229); /* Change underline color on hover */
+        }
+
+        .navbar a.active {
+            border-bottom-color: rgb(23, 181, 28); /* Active link underline color */
+        }
+    </style>
 </head>
 <body>
-    <a style="font-size: 5rem;" href="adddata">ading data</a>
-    <br><br><br>
-    <a style="font-size: 5rem;" href="showdata">show data</a>
+
+<div class="navbar">
+    <a  href="adddata" style="font-size: 2rem;">Add Data</a>
+    <a href="showdata" style="font-size: 2rem;">Show Data</a>
+</div>
+
 </body>
 </html>
