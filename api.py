@@ -25,7 +25,18 @@ def submit():
             cur.execute("INSERT INTO student (name, email) VALUES ( ?, ?)", (name, email))
             con.commit()
         return render_template("result.html")
-
+@app.route("/showdata")
+def show_data():
+        con = sql.Connection("mydatabase.db")
+        con.row_factory =sql.Row
+        
+        cur =con.cursor()
+        
+        cur.execute("select * from student ")
+        
+        rows = cur.fetchall()
+        
+        return render_template("showdata.html", rows=rows)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)

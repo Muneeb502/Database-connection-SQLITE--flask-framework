@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px solid">
+          <thead>
+            <td>NAME</td>
+            <td>email</td>
+          </thead>
+
+          {%  fro row in rows %}
+
+          <tr>
+            <td>{{row["name"]}}</td>
+            <td>{{row["email"]}}</td>
+          </tr>
+
+          {%  endfor %}
+
+
+          <a href="/">go to home page</a>
+    </table>
+</body>
+</html>
