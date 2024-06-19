@@ -39,4 +39,4 @@ def show_data():
         return render_template("showdata.html", rows=rows)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5201)
